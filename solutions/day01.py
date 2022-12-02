@@ -21,9 +21,10 @@ def calorie_to_number(s: str):
 		return None
 	return int(s)
 
-calories_file = open("./elf-calories.txt", "r")
+calories_file = open("input-files/day01-elf-calories.txt", "r")
 calories_string: str = calories_file.read()
 calories_file.close()
+
 calories_list = [calorie_to_number(s) for s in calories_string.split("\n")]
 max_total_calories: int = 0
 current_total_calories: int = 0
