@@ -41,7 +41,7 @@ def part_2_solution(input: str):
 	assert len(lines) % 3 == 0
 	return sum(find_common_item_priority_in_list(lines[(3 * i):(3 * i + 3)]) for i in range(len(lines) // 3))
 
-file = open("input-files/day03-rucksack-items.txt", "r")
+file = open("src/input-files/day03-rucksack-items.txt", "r")
 rucksack_items_string = file.read()
 file.close()
 

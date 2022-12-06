@@ -21,7 +21,7 @@ def calorie_to_number(s: str):
 		return None
 	return int(s)
 
-calories_file = open("input-files/day01-elf-calories.txt", "r")
+calories_file = open("src/input-files/day01-elf-calories.txt", "r")
 calories_string: str = calories_file.read()
 calories_file.close()
 

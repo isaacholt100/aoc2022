@@ -41,7 +41,7 @@ class Shape(IntEnum):
 		shape_score = ((((outcome_int // 3) - 1) + int(oppponent)) % 3 + 2) % 3 + 1
 		return outcome_int + shape_score
 
-strategy_file = open("input-files/day02-rps-strategy.txt", "r")
+strategy_file = open("src/input-files/day02-rps-strategy.txt", "r")
 strategy_string = strategy_file.read()
 strategy_file.close()
 

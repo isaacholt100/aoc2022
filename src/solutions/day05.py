@@ -51,7 +51,7 @@ move 3 from 1 to 3
 move 2 from 2 to 1
 move 1 from 1 to 2"""
 
-file = open("input-files/day05-crate-instructions.txt", "r")
+file = open("src/input-files/day05-crate-instructions.txt", "r")
 input_string = file.read()
 file.close()
 
