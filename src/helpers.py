@@ -5,8 +5,8 @@ class TestCases:
 	def run_tests(self, part1_fn, part2_fn):
 		for key, val in self.cases.items():
 			if part2_fn is not None:
-				assert part1_fn(key) == val[0]
-				assert part2_fn(key) == val[1]
+				assert val[0] == None or part1_fn(key) == val[0]
+				assert val[1] == None or part2_fn(key) == val[1]
 			else:
 				assert part1_fn(key) == val
 	

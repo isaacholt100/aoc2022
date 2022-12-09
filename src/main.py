@@ -7,4 +7,7 @@ if __name__ == "__main__":
 	from helpers import Solutions
 
 	s = Solutions("day" + day + ".txt", mod.tests)
-	s.print_answers(mod.part1_solution, mod.part2_solution)
+	if "part2_solution" in dir(mod):
+		s.print_answers(mod.part1_solution, mod.part2_solution)
+	else:
+		s.print_answers(mod.part1_solution)
