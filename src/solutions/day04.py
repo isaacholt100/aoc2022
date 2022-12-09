@@ -25,12 +25,7 @@ test_input_string = """2-4,6-8
 2-8,3-7
 6-6,4-6
 2-6,4-8"""
-file = open("src/input-files/day04-task-ids.txt", "r")
-input_string = file.read()
-file.close()
 
-p1 = part1_solution(input_string)
-p2 = part2_solution(input_string)
-assert p2 >= p1
-print("PART 1 ANSWER:", p1)
-print("PART 2 ANSWER:", p2)
+tests = {
+	test_input_string: (2, 4)
+}

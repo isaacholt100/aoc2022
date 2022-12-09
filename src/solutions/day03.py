@@ -19,13 +19,8 @@ def priority(s: str):
 		return o - 96
 	raise BaseException("letter expected")
 
-def part_1_solution(input: str):
-	return sum(find_common_item_priority(s) for s in input.split("\n"))
-
 def find_common_item_priority_in_list(items_list: list[str]):
 	assert len(items_list) > 1
-	print(items_list)
-	chars_dict = dict()
 	chars_set = set()
 	for c in items_list[0]:
 		chars_set.add(c)
@@ -36,14 +31,13 @@ def find_common_item_priority_in_list(items_list: list[str]):
 		chars_set = chars_set.intersection(new_chars_set)
 	return priority(chars_set.pop())
 
-def part_2_solution(input: str):
+def part1_solution(input: str):
+	return sum(find_common_item_priority(s) for s in input.split("\n"))
+
+def part2_solution(input: str):
 	lines = input.split("\n")
 	assert len(lines) % 3 == 0
 	return sum(find_common_item_priority_in_list(lines[(3 * i):(3 * i + 3)]) for i in range(len(lines) // 3))
-
-file = open("src/input-files/day03-rucksack-items.txt", "r")
-rucksack_items_string = file.read()
-file.close()
 
 test_input_string = """vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
@@ -52,7 +46,6 @@ wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw"""
 
-assert part_1_solution(test_input_string) == 157
-print("PART 1 ANSWER:", part_1_solution(rucksack_items_string))
-
-print("PART 2:", part_2_solution(rucksack_items_string))
+tests = {
+	test_input_string: (157, 70)
+}

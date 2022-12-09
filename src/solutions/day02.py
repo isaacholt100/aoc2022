@@ -41,10 +41,16 @@ class Shape(IntEnum):
 		shape_score = ((((outcome_int // 3) - 1) + int(oppponent)) % 3 + 2) % 3 + 1
 		return outcome_int + shape_score
 
-strategy_file = open("src/input-files/day02-rps-strategy.txt", "r")
-strategy_string = strategy_file.read()
-strategy_file.close()
+def part1_solution(input: str):
+	return sum([Shape.from_char(s[2]).score(Shape.from_char(s[0])) for s in input.split("\n")])
 
-print("PART 1 ANSWER:", sum([Shape.from_char(s[2]).score(Shape.from_char(s[0])) for s in strategy_string.split("\n")]))
+def part2_solution(input: str):
+	return sum([Shape.score_from_outcome(s[2], Shape.from_char(s[0])) for s in input.split("\n")])
 
-print("PART 2 ANSWER:", sum([Shape.score_from_outcome(s[2], Shape.from_char(s[0])) for s in strategy_string.split("\n")]))
+test_input_string = """A Y
+B X
+C Z"""
+
+tests = {
+	test_input_string: (15, 12)
+}
