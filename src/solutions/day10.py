@@ -205,7 +205,3 @@ part_2_test_answer = """\n##..##..##..##..##..##..##..##..##..##..
 tests = {
 	test_input_string: (13140, part_2_test_answer)
 }
-
-
-
-#print(part2_solution(test_input_string))
