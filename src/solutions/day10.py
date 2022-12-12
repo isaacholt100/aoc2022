@@ -22,7 +22,6 @@ def change_at_index(s: str, index: int, char: str):
 
 def part2_solution(input: str):
 	image_matrix = [["." for _ in range(40)] for _ in range(6)]
-	print(["".join(row) for row in image_matrix])
 	image = (("." * 40) + "\n") * 6
 	cycle = 0
 	x = 1
