@@ -7,6 +7,4 @@ Each file in the `src/solutions` folder exports three items:
 2. A `part2_solution` function which gives the correct answer for the given puzzle input.
 3. A `tests` dictionary for testing the previous two functions against given test cases.
 
-To print the answers for a given day, run the `src/main.py` file (this can be done by using the Run button if viewing this in Replit).
-
-and enter the day as a two-digit number. This automatically runs the tests from the `tests` dictionary in that day's solution file, as mentioned above.
+To print the answers for a given day, run the `src/main.py` file (this can be done via the Run button if viewing this in Replit) and enter the day as a two-digit number. This automatically runs the tests from the `tests` dictionary in that day's solution file, as mentioned above.
